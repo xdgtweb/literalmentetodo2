@@ -1,0 +1,215 @@
+* {
+    padding: 0;
+    margin: 0;
+    /*cursor: url('../img/punteros/normalSelect.png'), auto;*/
+}
+
+body {
+    display: block;
+    background-color: aquamarine;
+}
+
+.caja1 {
+    display: flex;
+}
+
+#header {
+    background-color: #fef7e7;
+    width: 150px;
+    position: sticky;
+    top: 0;
+}
+
+#header nav {
+    display: grid;
+}
+
+#header nav .auxA_1 {
+    background-color: #fad785;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px 10px 3px 3px;
+}
+
+#header nav .auxA_1 .enlace {
+    display: inline-block;
+    position: absolute;
+    width: 80px;
+    height: 50px;
+    background-color: transparent;
+    z-index: 999;
+}
+
+#header nav .auxA_1 .enlace:hover {
+    /*cursor: url('../img/punteros/linkSelect.png'), auto;*/
+}
+
+#header nav .auxA_1 .tapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: "fuente1";
+    font-weight: 100;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    bottom: 20px;
+    right: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px 10px 3px 3px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(250, 215, 133, 255, 0.1);
+    transition: 0.3s;
+}
+
+#header nav .auxA_2 {
+    position: absolute;
+    background-color: white;
+    width: 80px;
+    height: 58px;
+    text-align: center;
+}
+
+#header nav .auxA_2 label {
+    display: block;
+    font-family: "fuente1";
+    font-weight: 100;
+    font-size: 15px;
+    margin-top: 3px;
+}
+
+#header nav .auxA_1:hover .tapa {
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+    transform: perspective(1200px) rotateX(-60deg);
+    transform-origin: 50% 100%;
+
+}
+
+#header #auxHeader {
+    text-align: center;
+}
+
+#header #auxHeader img {
+    width: 50px;
+    padding: 5px;
+}
+
+#header #auxHeader label {
+    font-family: fuente1;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+#main {
+    text-align: center;
+    background-color: #fef7e7;
+    height: 100%;
+    width: 100%;
+}
+
+#main label {
+    display: block;
+    font-family: fuente1;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#main iframe {
+    border: none;
+    border-radius: 30px;
+    /*cursor: url('../img/punteros/normalSelect.png'), auto;*/
+}
+
+#footer {
+    background-color: #fef7e7;
+    height: 40px;
+    text-align: center;
+}
+
+#footer .cajaFlex {
+    display: inline-flex;
+}
+
+#footer .cajaFlex label {
+    display: inline-block;
+    font-family: 'Arial Narrow', sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+@media (max-width: 600px) {
+
+    #header #auxHeader {
+        display: grid;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #header {
+        background-color: #fef7e7;
+        width: 100%;
+    }
+
+    #main label {
+        display: inline-block;
+        font-family: fuente1;
+        font-size: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #header #auxHeader img {
+        width: 50px;
+        padding: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .caja1 {
+        display: grid;
+    }
+
+    #header nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        flex-flow: row;
+    }
+
+    #main {
+        text-align: center;
+        background-color: #fef7e7;
+        height: 100%;
+        width: 100%;
+        display: inline-grid;
+    }
+
+    #main iframe {
+        border: none;
+        border-radius: 30px;
+        /* cursor: url(../img/punteros/normalSelect.png), auto; */
+        margin-left: auto;
+        margin-right: auto;
+        width: 480px;
+        height: 479px;
+    }
+
+}
+
+@font-face {
+    font-family: fuente1;
+    src: url('../font/TechnaSans-Regular.otf');
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+
+<head id="head"></head>
+
+<body>
+    <div class="caja1">
+        <header id="header"></header>
+        <main id="main"></main>
+    </div>
+    <footer id="footer"></footer>
+
+
+    <script src="js/headIndex.js"></script>
+    <script>
+        const head = document.getElementById('head');
+        head.innerHTML = headHTML;
+    </script>
+    <script src="js/headerIndex.js"></script>
+    <script>
+        const header = document.getElementById('header');
+        header.innerHTML = headerHTML;
+    </script>
+    <script src="js/mainIndex.js"></script>
+    <script>
+        const main = document.getElementById('main');
+        main.innerHTML = mainIndexHTML;
+    </script>
+    <script src="js/footerIndex.js"></script>
+    <script>
+        const footer = document.getElementById('footer');
+        footer.innerHTML = footerHTML;
+    </script>
+
+
+    <script>
+        // Inserta el HTML antes de que se renderice el documento
+        document.head.insertAdjacentHTML('beforeend', headHTML);
+
+        // Aplica estilos adicionales
+        document.head.innerHTML += `
+            <title>Sobre mi</title>
+            <style>
+            #header nav .auxA_1:nth-of-type(1) .tapa
+            {
+                box-shadow: 0 0px 10px rgba(0,0,0,0.5) !important;
+                transform: perspective(1200px) rotateX(-60deg) !important;
+                transform-origin: 50% 100% !important;
+
+            }
+            #header nav .auxA_1:nth-of-type(1) .enlace
+            {
+            display: none !important;
+            }
+        </style>
+        `;
+    </script>
+    <script>
+
+        const iframe = document.getElementById('curriculum');
+
+        if (window.matchMedia('(max-width: 600px)').matches) {
+
+            function setIframeSize() {
+
+                // Obtener ancho y alto de la ventana
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+
+                // Calcular width y height del iframe
+                const iframeWidth = width - 20;
+                const iframeHeight = height - 156;
+
+                // Asignar a iframe
+                iframe.style.width = iframeWidth + 'px';
+                iframe.style.height = iframeHeight + 'px';
+
+            }
+        }
+        else {
+            function setIframeSize() {
+
+                // Obtener ancho y alto de la ventana
+                const width = window.innerWidth;
+                const height = window.innerHeight;
+
+                // Calcular width y height del iframe
+                const iframeWidth = width - 120;
+                const iframeHeight = height - 84;
+
+                // Asignar a iframe
+                iframe.style.width = iframeWidth + 'px';
+                iframe.style.height = iframeHeight + 'px';
+
+            }
+        }
+
+        // Ejecutar función al redimensionar
+        window.addEventListener('resize', setIframeSize);
+
+        // Ejecutar inicialmente
+        setIframeSize();
+
+    </script>
+</body>
+
+</html>

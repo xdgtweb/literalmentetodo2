@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head id="head" class="estiloAdicional">
+    <body>
+        <div class="caja1">
+            <header id="header"></header>
+            <main id="main"></main>
+        </div>
+        <footer id="footer"></footer>
+
+
+        <script src="js/headIndex.js"></script>
+        <script>
+            const head = document.getElementById('head');
+            head.innerHTML = headHTML;
+        </script>
+        <script src="js/headerIndex.js"></script>
+        <script>
+            const header = document.getElementById('header');
+            header.innerHTML = headerHTML;
+        </script>
+        <script src="js/mainProyectos.js"></script>
+        <script>
+            const main = document.getElementById('main');
+            main.innerHTML = mainProyectosHTML;
+        </script>
+        <script src="js/footerIndex.js"></script>
+        <script>
+            const footer = document.getElementById('footer');
+            footer.innerHTML = footerHTML;
+        </script>
+
+
+        <script>
+        // Inserta el HTML antes de que se renderice el documento
+        document.head.insertAdjacentHTML('beforeend', headHTML);
+
+        // Aplica estilos adicionales
+        document.head.innerHTML += `
+            <style>
+            #header nav .auxA_1:nth-of-type(2) .tapa
+            {
+                box-shadow: 0 0px 10px rgba(0,0,0,0.5) !important;
+                transform: perspective(1200px) rotateX(-60deg) !important;
+                transform-origin: 50% 100% !important;
+
+            }
+            #header nav .auxA_1:nth-of-type(2) .enlace
+            {
+            display: none !important;
+            }
+        </style>
+        `;
+        </script>
+    </body>
+</html>
